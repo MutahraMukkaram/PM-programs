@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+void areaCircle()
+{
+    float r, area;
+    cout << "Enter radius of circle: ";
+    cin >> r;
+    area = 3.14 * r * r;
+    cout << "Area of Circle = " << area << endl;
+}
+void areaRectangle()
+{
+    float l, b, area;
+    cout << "Enter length and breadth of rectangle: ";
+    cin >> l >> b;
+    area = l * b;
+    cout << "Area of Rectangle = " << area << endl;
+}
+void areaSquare()
+{
+    float a, area;
+    cout << "Enter side of square: ";
+    cin >> a;
+    area = a * a;
+    cout << "Area of Square = " << area << endl;
+}
+
+int main()
+{
+    int choice;
+    cout << "1. Area of Circle" << endl;
+    cout << "2. Area of Rectangle" << endl;
+    cout << "3. Area of Square" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    switch (choice)
+    {
+        case 1:
+            areaCircle();
+            break;
+        case 2:
+            areaRectangle();
+            break;
+        case 3:
+            areaSquare();
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+    }
+    return 0;
+}
